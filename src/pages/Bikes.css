@@ -1,0 +1,261 @@
+/* ===== Main Container ===== */
+.bikes {
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #090909, #1a1a1a);
+  font-family: 'Arial', sans-serif;
+}
+
+/* ===== Heading ===== */
+.bikes h1 {
+  font-size: 32px;
+  background-color: #fac031;
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 12px;
+  color: #222;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ===== Vehicle Type Buttons ===== */
+.vehicle-types {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.vehicle-types button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #fac031;
+  color: #222;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.vehicle-types button:hover {
+  background: #e4a71d;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ===== Bike Cards ===== */
+.bike-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.bike-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bike-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.bike-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.bike-card h2 {
+  margin: 12px 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.bike-card p {
+  margin-bottom: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+.bike-buttons {
+  margin-bottom: 15px;
+}
+
+.bike-card button {
+  width: 90%; /* Make button almost full width */
+  margin: 10px auto; /* Center it */
+  display: block;
+  padding: 12px 0;
+  background: #fac031;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.3s;
+  text-align: center;
+}
+.bike-card button:hover {
+  background: #e4a71d;
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+
+/* ===== Popup Overlay ===== */
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ===== Popup Box ===== */
+.popup-box {
+  background: #fff;
+  padding: 30px 35px;
+  border-radius: 16px;
+  width: 420px;
+  max-width: 90%;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+  position: relative;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.popup-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #222;
+  font-size: 24px;
+}
+
+/* ===== Form Groups ===== */
+.form-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* ===== Inputs & Select ===== */
+input[type="tel"], select {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Center mobile number input */
+input[type="tel"] {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+}
+
+input[type="tel"]:focus, select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.4);
+}
+
+/* ===== Total Price ===== */
+.total {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+  color: #1a8917;
+  font-weight: 600;
+}
+
+/* ===== Popup Buttons ===== */
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  gap: 10px;
+}
+
+.confirm, .cancel {
+  flex: 1;
+  padding: 12px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.confirm {
+  background: #28a745;
+  color: white;
+}
+
+.confirm:hover {
+  background: #218838;
+}
+
+.cancel {
+  background: #dc3545;
+  color: white;
+}
+
+.cancel:hover {
+  background: #c82333;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 500px) {
+  .popup-box {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .vehicle-types {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,16 @@
+.footer {
+  padding: 20px 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent */
+  color: #fff;
+  font-size: 16px;
+}
+
+.footer span {
+  color: #fac031; /* Yellow for brand */
+  font-weight: bold;
+}
+
+.footer p {
+  margin: 0;
+}

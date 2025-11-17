@@ -24,8 +24,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "postbuild": "copy build\\index.html build\\404.html",
+  "build": "react-scripts build",
+  "postbuild": "node -e \"require('fs').copyFileSync('build/index.html','build/404.html')\"",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },

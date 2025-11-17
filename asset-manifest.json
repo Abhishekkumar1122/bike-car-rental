@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/bike-car-rental/static/css/main.22e3f01e.css",
+    "main.js": "/bike-car-rental/static/js/main.737a62a7.js",
+    "index.html": "/bike-car-rental/index.html",
+    "main.22e3f01e.css.map": "/bike-car-rental/static/css/main.22e3f01e.css.map",
+    "main.737a62a7.js.map": "/bike-car-rental/static/js/main.737a62a7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.22e3f01e.css",
+    "static/js/main.737a62a7.js"
+  ]
+}

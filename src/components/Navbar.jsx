@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaHome, FaMotorcycle, FaCar, FaInfoCircle, FaPhoneAlt } from 'react-icons/fa';
  // bike icon
 import './Navbar.css';
 
 function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  const toggleMenu = () => setOpen(o => !o);
+
   return (
     <nav className="navbar">
       {/* Logo */}
@@ -15,8 +19,21 @@ function Navbar() {
         </Link>
       </div>
 
+      {/* Mobile hamburger */}
+      <button
+        className={`hamburger${open ? ' open' : ''}`}
+        aria-label="Toggle navigation"
+        aria-expanded={open}
+        aria-controls="main-navigation"
+        onClick={toggleMenu}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+
       {/* Links */}
-      <ul className="navbar-links">
+      <ul id="main-navigation" className={`navbar-links${open ? ' open' : ''}`} onClick={() => setOpen(false)}>
         <li>
           <Link to="/"><FaHome /> Home</Link>
         </li>

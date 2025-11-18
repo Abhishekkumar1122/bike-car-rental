@@ -259,3 +259,90 @@ input[type="tel"]:focus, select:focus {
     gap: 10px;
   }
 }
+
+/* Tablet: improve grid and spacing for medium screens */
+@media (max-width: 768px) {
+  .bikes {
+    padding: 60px 16px;
+  }
+
+  .bikes h1 {
+    font-size: 28px;
+    padding: 10px 20px;
+  }
+
+  .bike-cards {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .bike-card img {
+    height: 160px;
+  }
+
+  .popup-box {
+    width: 360px;
+    padding: 25px;
+  }
+}
+
+/* Mobile: single column layout and tighter spacing */
+@media (max-width: 480px) {
+  .bikes {
+    padding: 40px 12px;
+  }
+
+  .bikes h1 {
+    font-size: 22px;
+    padding: 8px 14px;
+  }
+
+  .bike-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .bike-card img {
+    height: 140px;
+  }
+
+  .bike-card h2 { font-size: 18px; }
+  .bike-card p { font-size: 14px; }
+
+  .popup-buttons {
+    flex-direction: column;
+  }
+
+  .popup-buttons .confirm, .popup-buttons .cancel {
+    width: 100%;
+  }
+}
+
+/* Tablet landscape and small laptop: two columns for cards */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .bike-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .bike-card {
+    padding: 12px;
+  }
+
+  .bike-card img {
+    height: 150px;
+  }
+}
+
+/* Keep buttons compact on small screens (centered with a max width) */
+@media (max-width: 1024px) {
+  .bike-card button, .bike-buttons button {
+    width: auto;
+    max-width: 220px;
+    display: inline-block;
+    margin: 8px auto;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    font-size: 15px;
+  }
+}

@@ -53,7 +53,7 @@ function Navbar() {
 
       {/* Rent Button */}
       <div className="navbar-button">
-        <Link to="/rent" className="btn">Rent Now</Link>
+        <Link to="/" className="btn">Rent Now</Link>
       </div>
     </nav>
   );
